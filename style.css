@@ -33,7 +33,7 @@ fieldset {
     
     width: 1000px;      /* Largeur fixe pour les grands écrans */
     max-width: 90vw;    /* Sécurité pour mobile (90% de la largeur de l'écran) */
-    margin: 40px auto;  /* Le "auto" centre horizontalement, 40px ajoute de l'espace en haut/bas */
+    margin: 0;  /* Le "auto" centre horizontalement, 40px ajoute de l'espace en haut/bas */
     overflow: hidden;
     background-color: rgba(32, 88, 86, 0.05); /* Optionnel : léger fond pour voir les limites */
     padding: 20px;
