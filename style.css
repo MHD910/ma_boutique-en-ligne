@@ -1,0 +1,269 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: rgba(194, 174, 174, 0.329);
+    transition: transform 0.5s;
+    border: 5px solid;
+}
+span h1{
+     font-size: larger;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     text-decoration: underline;
+     text-align: center;
+     color: #31312c;
+     background-color: #0070ba;
+}
+    
+
+fieldset {
+    border: 10px solid #E8BC0E; /* Bordure épaisse couleur or comme ton total */
+    border-radius: 20px;      /* Arrondit les coins pour un look moderne */
+    max-width: 1300px;         /* Limite la largeur pour ne pas prendre toute la page */
+    margin-top:25 px ;
+    margin-left:  50px;   
+    margin-right:50 px ;
+    margin-bottom:50px ; 
+    padding: 40px;            /* Donne beaucoup d'espace à l'intérieur */
+    background-color: #fff;   /* Couleur de fond pour qu'il ressorte */
+}
+
+
+.container {
+    
+    width: 1000px;      /* Largeur fixe pour les grands écrans */
+    max-width: 90vw;    /* Sécurité pour mobile (90% de la largeur de l'écran) */
+    margin: 40px auto;  /* Le "auto" centre horizontalement, 40px ajoute de l'espace en haut/bas */
+    overflow: hidden;
+    background-color: rgba(32, 88, 86, 0.05); /* Optionnel : léger fond pour voir les limites */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+
+.title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 170%;
+    margin-left: 5%;
+}
+
+svg {
+    width: 40px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+header .icon-cart {
+    position: relative;
+    cursor: pointer;
+}
+
+header .icon-cart span {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(107, 194, 20);
+    justify-content: center;
+    align-items: center;
+    color: rgb(78, 70, 70);
+    border-radius: 50%;
+    position: absolute;
+    top: 14px;
+    right: -20px;
+}
+
+.listproduct {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-left: 35px;
+}
+
+.listproduct .item {
+    background-color: #919115;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.listproduct .item img {
+    width: 90%;
+
+}
+
+.listproduct .item h2 {
+    font-weight: 500;
+    font-size: large;
+}
+
+.listproduct .item .price {
+    letter-spacing: 3px;
+    font-size: small;
+}
+
+.listproduct .item button {
+    background-color: rgb(24, 223, 206);
+    color: rgb(107, 107, 80);
+    padding: 5px 10px;
+    border-radius: 20px;
+    height: 30px;
+    border: 1px solid aqua;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.carttab {
+    width: 405px;
+    background-color: rgb(91, 32, 158);
+    color: rgb(245, 137, 6);
+    position: fixed;
+    inset: 0 -405px 0 auto;
+    display: grid;
+    /* J'ai ajusté ici : Header (70px), Liste (Auto), Total (70px), Boutons (70px) */
+    grid-template-rows: 70px 1fr 70px 70px; 
+    transition: inset 0.5s;
+}
+
+body.showcart .carttab {
+    inset: 0 0 0 auto;
+}
+
+body.showcart .container {
+    transform: translateX(-250px);
+}
+
+.carttab h1 {
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(17, 240, 240);
+    border-radius: 50px;
+    text-align: center;
+}
+
+.carttab .listcart {
+    overflow: auto;
+}
+
+.carttab .listcart::-webkit-scrollbar {
+    width: 0;
+}
+
+.carttab .listcart .item {
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.carttab .listcart .item img {
+    width: 100%;
+}
+
+.listcart .quantity span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(179, 20, 171);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    line-height: 25px;
+}
+
+.listcart .quantity span:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+}
+
+/* --- AJOUTS POUR LE TOTAL --- */
+.totalCart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-top: 1px solid #444;
+}
+
+.totalText {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #eee;
+}
+
+.totalValue {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #E8BC0E;
+}
+
+.carttab .btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.carttab .btn button {
+    border: none;
+    background-color: chartreuse;
+    color: rgb(100, 88, 56);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.carttab .btn .close {
+    background-color: #eee;
+}
+
+/* --- AJOUTS POUR LA MODAL DE PAIEMENT --- */
+.payment-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-modal-content {
+    background: #353432;
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    color: #eee;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.pay-btn {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.stripe { background: #E8BC0E; color: #000; }
+.paypal { background: #0070ba; color: #fff; }
+.cancel { background: transparent; color: #ccc; }
+
+.pay-btn:hover {
+    opacity: 0.8;
+}

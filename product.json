@@ -1,0 +1,77 @@
+[
+    {
+    "id": 1,
+    "name":"Ombre Nomade",
+    "price": 375,
+    "image":"ombre nomad.jpeg"
+},
+{
+    "id": 2,
+    "name":"Kalemat",
+    "price": 100,
+    "image":"kalemat.jpeg"
+},
+{
+    "id": 3,
+    "name":"Khaiyyal",
+    "price": 110,
+    "image":"khayyal.jpeg"
+},
+{
+    "id": 4,
+    "name":"Centro",
+    "price": 35,
+    "image":"centro.jpeg"
+},
+{
+    "id": 5,
+    "name":"9Pm",
+    "price": 30,
+    "image":"9pm.jpeg"
+},
+{
+    "id": 6,
+    "name":"Liquid Brun",
+    "price": 45,
+    "image":"liquid brun.jpeg"
+},
+{
+    "id": 7,
+    "name":"Brulée",
+    "price": 165,
+    "image":"brule.jpeg"
+},
+{
+    "id": 8,
+    "name":"Ajwad ",
+    "price": 25,
+    "image":"ajwad.jpeg"
+},
+{
+    "id": 9,
+    "name":" Assad",
+    "price": 30,
+    "image":"assade.jpeg"
+},
+{
+    "id": 10,
+    "name":"Ekhtiari",
+    "price": 20,
+    "image":"erithtar .jpeg"
+},
+{
+    "id": 11,
+    "name":"Rifaaquat",
+    "price": 35,
+    "image":"rifaaquat.jpeg"
+},
+{
+    "id": 12,
+    "name":"Intense Wayfera",
+    "price": 25,
+    "image":"intese.jpeg"
+}
+]
+
+
+
